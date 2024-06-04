@@ -5,6 +5,7 @@ class Article:
         self.magazine = magazine
         self.title = title
         Article.all.append(self)
+
     @property
     def title(self):
         return self._title
@@ -82,9 +83,11 @@ class Magazine:
     def __init__(self, name, category):
         self.name = name
         self.category = category
+
     @property
     def name(self):
         return self._name
+    
     @name.setter
     def name(self, new_name):
         if isinstance(new_name, str):
@@ -98,6 +101,7 @@ class Magazine:
     @property
     def category(self):
         return self._category
+    
     @category.setter
     def category(self, new_category):
         if isinstance(new_category, str):
@@ -145,6 +149,7 @@ class Magazine:
         self.magazine = magazine
         self.title = title
         Article.all.append(self)
+
     @property
     def title(self):
         return self._title
@@ -161,6 +166,7 @@ class Magazine:
                     ValueError("Title must be between 5 and 50 characters")
             else:
                 TypeError("Title must be a string")
+
             
     @property
     def author(self):
@@ -187,9 +193,11 @@ class Magazine:
 class Author:
     def __init__(self, name):
         self.name = name
+
     @property
     def name(self):
         return self._name
+    
     @name.setter
     def name(self, new_name):
         if hasattr(self, "name"):
@@ -223,9 +231,11 @@ class Magazine:
     def __init__(self, name, category):
         self.name = name
         self.category = category
+
     @property
     def name(self):
         return self._name
+    
     @name.setter
     def name(self, new_name):
         if isinstance(new_name, str):
@@ -239,6 +249,7 @@ class Magazine:
     @property
     def category(self):
         return self._category
+    
     @category.setter
     def category(self, new_category):
         if isinstance(new_category, str):
